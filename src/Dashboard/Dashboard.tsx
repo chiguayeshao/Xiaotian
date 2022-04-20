@@ -5,9 +5,9 @@ import Navbar from '../Navbar/Navbar'
 const Dashboard = () => {
     return (
         <div>
-            <div>Dashboard</div>
             <Navbar />
             <Outlet />
+            <div>Dashboard</div>
         </div>
     )
 }
