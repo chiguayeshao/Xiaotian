@@ -2,7 +2,7 @@ const Navbar = () => {
     return (
         <div className="bg-slate-400">
             <nav className="relative container mx-auto">
-                <div className="flex justify-center items-center">
+                <div className="flex justify-around items-center">
                     <div className="m-5 pr-20">
                         <a href="/" className=" font-bold text-white text-2xl">
                             Xiaotian Ye
