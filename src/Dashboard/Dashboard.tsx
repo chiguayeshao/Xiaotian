@@ -15,7 +15,7 @@ const Dashboard = () => {
             </div>
 
             <div className=" flex container justify-between mx-auto">
-                <section className="flex flex-col mx-auto">
+                <section className="flex flex-col ml-20">
                     <PostCard />
                     <PostCard />
                     <PostCard />
@@ -27,7 +27,7 @@ const Dashboard = () => {
                 </section>
 
                 {/* avatar */}
-                <div className=" w-80 h-80 bg-pink-300"></div>
+                <div className="w-80 h-80 bg-pink-300 mr-20"></div>
             </div>
 
             <Outlet />
