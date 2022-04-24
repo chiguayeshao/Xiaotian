@@ -32,6 +32,9 @@ const PostCard = (props: any) => {
                                 <button
                                     key={index}
                                     className="px-8 py-2 mr-5 text-white bg-blue-500 rounded-lg hover:bg-blue-300"
+                                    onClick={() => {
+                                        props.handleClick(tag)
+                                    }}
                                 >
                                     {tag}
                                 </button>

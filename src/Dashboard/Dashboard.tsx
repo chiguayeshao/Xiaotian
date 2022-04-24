@@ -35,6 +35,9 @@ const Dashboard = () => {
                                 title={post.title}
                                 content={post.content}
                                 tags={post.tags}
+                                handleClick={(value: string) => {
+                                    console.log('go to' + value)
+                                }}
                             />
                         )
                     })}
