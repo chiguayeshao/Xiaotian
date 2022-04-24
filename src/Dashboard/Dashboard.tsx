@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
 import PostCard from '../CommonComponent/PostCard'
+import axios from 'axios'
 
 const Dashboard = () => {
+    const baseUrl = 'http://localhost:3001/posts'
+    const [postData, setPostData] = useState([])
+    useEffect(() => {
+        axios.get(baseUrl).then((res) => {
+            setPostData(res.data)
+        })
+    }, [])
+
     return (
         <div>
             <Navbar />
@@ -16,14 +25,18 @@ const Dashboard = () => {
 
             <div className=" flex container justify-between mx-auto">
                 <section className="flex flex-col ml-20">
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
+                    {postData.map((post: any) => {
+                        return (
+                            <PostCard
+                                key={post.id}
+                                id={post.id}
+                                month={post.pushMonth}
+                                date={post.pushDate}
+                                title={post.title}
+                                content={post.content}
+                            />
+                        )
+                    })}
                 </section>
 
                 {/* avatar */}

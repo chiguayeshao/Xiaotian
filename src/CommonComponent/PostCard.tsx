@@ -1,19 +1,22 @@
 import React from 'react'
 
-const PostCard = (props?: any) => {
+const PostCard = (props: any) => {
+    console.log(props, 'props')
     return (
         <div className=" mb-4">
             <hr className="h-1 bg-slate-600 mb-4" />
             <div className="flex justify-around h-52">
                 <div className="flex flex-col w-10">
                     <div className="flex justify-center mx-auto text-4xl font-bold">
-                        12
+                        {props.date}
                     </div>
-                    <div className="flex justify-center mx-auto">2月</div>
+                    <div className="flex justify-center mx-auto">
+                        {props.month}
+                    </div>
                 </div>
                 <div className="flex flex-col ml-8">
                     <div>
-                        <h3 className="text-3xl mb-4">fuck post</h3>
+                        <h3 className="text-3xl mb-4">{props.title}</h3>
                     </div>
                     <div className="w-auto">
                         <p className="break-words w-min mb-4">
