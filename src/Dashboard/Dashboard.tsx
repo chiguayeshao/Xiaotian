@@ -23,7 +23,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className=" flex container justify-between mx-auto">
+            <div className="flex container justify-between mx-auto">
                 <section className="flex flex-col ml-20">
                     {postData.map((post: any) => {
                         return (
@@ -34,13 +34,14 @@ const Dashboard = () => {
                                 date={post.pushDate}
                                 title={post.title}
                                 content={post.content}
+                                tags={post.tags}
                             />
                         )
                     })}
                 </section>
 
                 {/* avatar */}
-                <div className="w-80 h-80 bg-pink-300 mr-20"></div>
+                <div className="w-80 h-80 bg-pink-300 mr-20 block"></div>
             </div>
 
             <Outlet />
