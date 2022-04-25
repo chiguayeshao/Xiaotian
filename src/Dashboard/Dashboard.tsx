@@ -36,6 +36,7 @@ const Dashboard = () => {
                                 content={post.content}
                                 tags={post.tags}
                                 handleClick={(value: string) => {
+                                    // to do react router navigate
                                     console.log('go to' + value)
                                 }}
                             />
